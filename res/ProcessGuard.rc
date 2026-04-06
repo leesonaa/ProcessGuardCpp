@@ -1,0 +1,57 @@
+// ProcessGuard.rc
+#include <windows.h>
+
+// ── Application icon ────────────────────────────────────────────────
+101 ICON "ProcessGuard.ico"
+
+// ── Version Info ──────────────────────────────────────────────────
+VS_VERSION_INFO VERSIONINFO
+FILEVERSION     1,0,0,0
+PRODUCTVERSION  1,0,0,0
+FILEFLAGSMASK   0x3fL
+FILEFLAGS       0x0L
+FILEOS          VOS_NT_WINDOWS32
+FILETYPE        VFT_APP
+FILESUBTYPE     VFT_UNKNOWN
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080404B0"
+        BEGIN
+            VALUE "CompanyName",      "ProcessGuard"
+            VALUE "FileDescription",  "进程守护工具"
+            VALUE "FileVersion",      "1.0.0.0"
+            VALUE "InternalName",     "ProcessGuard"
+            VALUE "OriginalFilename", "ProcessGuard.exe"
+            VALUE "ProductName",      "ProcessGuard"
+            VALUE "ProductVersion",   "1.0.0.0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x0804, 0x04B0
+    END
+END
+
+// ── Manifest: require admin + enable visual styles + DPI aware ──────────────
+1 RT_MANIFEST BEGIN
+"<?xml version='1.0' encoding='UTF-8' standalone='yes'?>"
+"<assembly xmlns='urn:schemas-microsoft-com:asm.v1' manifestVersion='1.0'>"
+"  <trustInfo xmlns='urn:schemas-microsoft-com:asm.v3'>"
+"    <security><requestedPrivileges><requestedExecutionLevel"
+"      level='asInvoker' uiAccess='false'/>"
+"    </requestedPrivileges></security>"
+"  </trustInfo>"
+"  <application xmlns='urn:schemas-microsoft-com:asm.v3'>"
+"    <windowsSettings>"
+"      <dpiAware xmlns='http://schemas.microsoft.com/SMI/2005/WindowsSettings'>true</dpiAware>"
+"      <dpiAwareness xmlns='http://schemas.microsoft.com/SMI/2016/WindowsSettings'>PerMonitorV2, PerMonitor, system</dpiAwareness>"
+"    </windowsSettings>"
+"  </application>"
+"  <dependency><dependentAssembly>"
+"    <assemblyIdentity type='win32' name='Microsoft.Windows.Common-Controls'"
+"      version='6.0.0.0' processorArchitecture='*'"
+"      publicKeyToken='6595b64144ccf1df' language='*'/>"
+"  </dependentAssembly></dependency>"
+"</assembly>"
+END

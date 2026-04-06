@@ -4,6 +4,8 @@
 
 ---
 
+<img width="660" height="496" alt="24200d538460aa3df4fb1dcf0a557402" src="https://github.com/user-attachments/assets/8493768e-d697-4d98-a35b-b865118bad2f" />
+
 ## 功能特性
 
 | 功能 | 说明 |
